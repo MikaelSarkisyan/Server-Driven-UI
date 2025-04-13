@@ -58,6 +58,8 @@
 # Модификация формы
 Для модицификации формы через JSON необходимо внести правки в файле data.json
 
-# Ссылки на репозитории
-2. Server - https://hub.docker.com/repository/docker/miqosarkisyan/vue-project-app-backend/
+# Ссылки
 1. Client - https://hub.docker.com/repository/docker/miqosarkisyan/vue-project-app/
+2. Server - https://hub.docker.com/repository/docker/miqosarkisyan/vue-project-app-backend/
+3. GitHub - https://github.com/MikaelSarkisyan/Server-Driven-UI
+4. Приложение - http://109.73.199.236/
