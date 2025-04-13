@@ -1,0 +1,56 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-app
+  labels:
+    app: test-app
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      project: test-app
+  template:
+    metadata:
+      labels:
+        project: test-app
+    spec:
+      containers:
+        - name: frontend
+          image: miqosarkisyan/vue-project-app:latest
+          ports:
+            - containerPort: 80
+        - name: nats
+          image: nats:latest
+          ports:
+            - containerPort: 4222
+        - name: backend
+          image: miqosarkisyan/vue-project-app-backend:latest
+          ports:
+            - containerPort: 3000
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-k8s-service
+  labels:
+    env: prod
+    owner: MikaelSarkisyan
+spec:
+  selector:
+    project: test-app
+  ports:
+    - name: client-listener
+      protocol: TCP
+      port: 80
+      targetPort: 80
+    - name: nats-listener
+      protocol: TCP
+      port: 4222
+      targetPort: 4222
+    - name: backend-listener
+      protocol: TCP
+      port: 3000
+      targetPort: 3000
+  type: LoadBalancer
+

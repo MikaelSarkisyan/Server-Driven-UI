@@ -1,0 +1,59 @@
+{
+  "schema": [
+    {
+      "id": 1,
+      "label": "Имя",
+      "name": "firstName",
+      "fieldType": "Text",
+      "placeholder": "Имя",
+      "required": "required"
+    },
+    {
+      "id": 2,
+      "label": "Фамилия",
+      "name": "lastName",
+      "fieldType": "Text",
+      "placeholder": "Фамилия",
+      "required": "required"
+    },
+    {
+      "id": 3,
+      "label": "E-mail",
+      "name": "email",
+      "fieldType": "Email",
+      "placeholder": "address@mail.ru",
+      "required": "required"
+    },
+    {
+      "id": 4,
+      "label": "Пароль",
+      "name": "password",
+      "fieldType": "Password",
+      "placeholder": "******",
+      "minLength": 6,
+      "required": "required"
+    },
+    {
+      "id": 5,
+      "label": "Роль",
+      "name": "title",
+      "fieldType": "SelectList",
+      "multiple": false,
+      "options": ["Админ", "Пользователь"],
+      "required": "required"
+    },
+    {
+      "id": 6,
+      "fieldType": "Checkbox",
+      "label": "Согласен с условиями",
+      "required": "required"
+    },
+    {
+      "id": 7,
+      "name": "submit",
+      "fieldType": "Submit",
+      "text": "Продолжить",
+      "required": "required"
+    }
+  ]
+}
