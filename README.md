@@ -42,10 +42,8 @@
 2. Зайти в папку client и прописать команду ```npm install```
 3. Зайти в папку client и прописать команду ```npm run dev```
 4. Зайти в папку server и прописать команду ```npm install```
-5. Прописать команду ```docker pull nats```
-6. Прописать команду ```docker run -d --name nats-server -p 4222:4222 -p 6222:6222 -p 8222:8222 nats```
-7. Прописать команду ```node index.js```
-8. Зайти на порт отправленный в терминале при запуске клиента и пользоваться приложением
+5. Прописать команду ```node index.js```
+6. Зайти на порт отправленный в терминале при запуске клиента и пользоваться приложением
 
 # Инструкция по запуску приложения на сервере
 1. Зайти в папку client и прописать команду ```docker build -t <имя пользователя в dockerhub>/<ваш репозиторий на dockerhub для клиента> .```
@@ -63,4 +61,4 @@
 1. Client - https://hub.docker.com/repository/docker/miqosarkisyan/vue-project-app/
 2. Server - https://hub.docker.com/repository/docker/miqosarkisyan/vue-project-app-backend/
 3. GitHub - https://github.com/MikaelSarkisyan/Server-Driven-UI
-4. Приложение - http://109.73.199.236/
+4. Приложение - http://109.73.199.236/ (сервер больше не поддерживается)
